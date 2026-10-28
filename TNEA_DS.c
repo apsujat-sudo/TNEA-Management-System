@@ -922,21 +922,9 @@ int main(int argc, char *argv[]) {
     (void)argc;
     useExecutableDirectory(argv[0]);
     loadAll();
-
-    // if (GETCWD(cwd, sizeof(cwd)) != NULL)
-    //     printf("Data directory: %s\n", cwd);
-    // else
-    //     puts("Data directory: current working directory (path unavailable)");
-    // printf("Loaded records: students=%s, colleges=%s, applications=%s\n",
-    //        students ? "yes" : "none", colleges ? "yes" : "none",
-    //        applications ? "yes" : "none");
-
     puts("==================================================");
     puts("   TNEA MANAGEMENT SYSTEM");
     puts("==================================================");
-    // puts("Structures demonstrated: linked lists, hash table, BST, max heap.");
-    // puts("Educational prototype; not the official TNEA portal.");
-
     do {
         puts("\n================ MAIN MENU ================");
         puts("1. Student registration");
