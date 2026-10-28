@@ -1,0 +1,13 @@
+# Compiled executables
+*.exe
+*.out
+
+# Generated application records
+tnea_ds_students.txt
+tnea_ds_colleges.txt
+tnea_ds_applications.txt
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
