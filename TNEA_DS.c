@@ -1,19 +1,3 @@
-/*
- * TNEA Data Structures Management System
- * Single-file C project demonstrating:
- * 1. Singly linked lists: students, colleges, applications, preferences
- * 2. Hash table with separate chaining: student email lookup
- * 3. Binary search tree: college ID index
- * 4. Max heap / priority queue: descending-cutoff allotment
- *
- * Compile: gcc tnea_ds.c -o tnea_ds
- * Run:     ./tnea_ds
- *
- * This is an educational simulation, NOT the official TNEA system.
- * Demo allotment rules are simplified. Passwords are stored locally in
- * plaintext for demonstration only; do not use this design in production.
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -280,10 +264,6 @@ static void rebuildCollegeTree(void) {
     for (p = colleges; p; p = p->next)
         collegeRoot = bstInsert(collegeRoot, p);
 }
-
-/* ---------- Persistence: text files, one record per line ---------- */
-/* Input fields are restricted to single-line text. A pipe character is not
-   supported in fields because it is used as the file separator. */
 
 static void saveAll(void) {
     FILE *f;
@@ -976,15 +956,6 @@ int main(int argc, char *argv[]) {
                 break;
             case 3: adminMenu(); pauseScreen(); break;
             case 4: listColleges(); pauseScreen(); break;
-            // case 5:
-            //     puts("\nSingly linked lists: dynamically store students, colleges and applications.");
-            //     puts("Hash table: find student by email using separate chaining.");
-            //     puts("BST: index colleges by ID.");
-            //     puts("Max heap: prioritize students by descending cutoff during allotment.");
-            //     puts("Linked preference list: stores college choices in preference order.");
-            //     puts("Records persist in three text files in the current directory.");
-            //     pauseScreen();
-            //     break;
             case 0: saveAll(); puts("Data saved. Goodbye."); break;
         }
     } while (choice != 0);
